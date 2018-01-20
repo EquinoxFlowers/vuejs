@@ -1,0 +1,30 @@
+{
+  "sites": [
+    {
+      "Name": "菜鸟教程",
+      "Price": "$35.6",
+      "Country": "CN",
+      "img":"http://www.optisolbusiness.com/wp-content/uploads/AngularJS-logo.png"
+    },
+    {
+      "Name": "Google",
+      "Price": "$35.6",
+      "Country": "USA",
+      "img":" http://img.imooc.com/53143b0a0001e15106000338.jpg"
+    },
+    {
+      "Name": "Facebook",
+      "Price": "$35.6",
+      "Country": "USA",
+      "img":" http://img.imooc.com/53143b0a0001e15106000338.jpg"
+
+    },
+    {
+      "Name": "微博",
+      "Price": "$35.6",
+      "Country": "CN",
+      "img":" http://img.imooc.com/53143b0a0001e15106000338.jpg"
+
+    }
+  ]
+}
