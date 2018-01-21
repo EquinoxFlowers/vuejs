@@ -3,9 +3,10 @@
     <div class="contents">
       <ul class="list">
         <li class="listli" v-for="record in commits">
-          <img src="../assets/logo.png" alt="">
-          <p>价格:{{record.sites.Name}}</p>
-          <p>名称：{{record.sites.Price}}</p>
+          <p>名字：{{record.commit.author.name}}</p>
+          <p>邮箱:{{record.commit.author.email}}<</p>
+          <p>名称：{{record.commit.author.date }}</p>
+
         </li>
       </ul>
     </div>
@@ -14,12 +15,13 @@
 </template>
 <script>
   import  http from 'http'
-  var apiURL='https://github.com/EquinoxFlowers/json.git'
+  var apiURL = 'https://api.github.com/repos/vuejs/vue/commits?per_page=3&sha=';
   export default {
     name: 'hello',
     data () {
       return {
-        msg: '欢迎来到菜鸟教程！',
+        branches: ['master', 'dev'],
+        currentBranch: 'master',
         commits: null
       }
     },
@@ -29,32 +31,36 @@
     watch:{
       currentBranch:'fetchData'
     },
+
+
     methods:{
       fetchData:function () {
-        var xhr=new XMLHttpRequest()
-        var self=this
-        xhr.open('GET',apiURL+self.currentBranch)
-        xhr.onload=function () {
-          self.commits=JSON.parse(xhr.responseText)
+        var xhr = new XMLHttpRequest()
+        var self = this
+        xhr.open('GET', apiURL + self.currentBranch)
+        xhr.onload = function () {
+          self.commits = JSON.parse(xhr.responseText)
         }
         xhr.send()
       }
     }
-
   }
+
+
 </script>
 <style>
-  ul,li{
+  ul, li {
     list-style: none;
-    display:inline-block;
+    display: inline-block;
   }
 
-  .list{
+  .list {
     width: 500px;
     height: 500px;
 
   }
-  .listli{
+
+  .listli {
     width: 200px;
     height: 200px;
     border: 1px slategrey solid;
@@ -63,7 +69,8 @@
     margin: 10px;
 
   }
-  .listli img{
+
+  .listli img {
     width: 120px;
     height: 100px;
     display: block;
