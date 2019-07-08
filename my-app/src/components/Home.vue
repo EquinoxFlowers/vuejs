@@ -3,7 +3,7 @@
     <div class="contents">
       <ul class="lists">
         <li class="list" v-for="record in commits">
-          <p>名字：{{record.commit.author.name}}</p>
+          <p>名jjjj字：{{record.commit.author.name}}</p>
           <p>邮箱:{{record.commit.author.email}}<</p>
           <p>名称：{{record.commit.author.date }}</p>
 
