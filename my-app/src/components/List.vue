@@ -5,6 +5,8 @@
         <li class="listli" v-for="record in commits">
           <p>hhhhhuu：{{record.commit.author.name}}</p>
           <p>kkkk:{{record.commit.author.email}}<</p>
+          <p>aaaaaaa：{{record.commit.author.name}}</p>
+          <p>fgggg:{{record.commit.author.email}}<</p>
           <p>名称：{{record.commit.audwwdwthor.date }}</p>
 
         </li>
