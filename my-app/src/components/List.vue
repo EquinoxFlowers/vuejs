@@ -4,8 +4,8 @@
       <ul class="list">
         <li class="listli" v-for="record in commits">
           <p>名字ddddddddddddddddddd：{{record.commit.author.name}}</p>
-          <p>邮箱:{{record.commit.author.email}}<</p>
-          <p>名称：{{record.commit.author.date }}</p>
+          <p>邮箱wwwwwwwwww:{{record.commit.author.email}}<</p>
+          <p>名称：{{record.commit.audwwdwthor.date }}</p>
 
         </li>
       </ul>
